@@ -4,7 +4,7 @@ public class ObPlaneMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody obPlaneRigidbody;
     [SerializeField] private Vector3 rotationAxis = Vector3.up;
-    [SerializeField] private float rotationSpeed = 180f;
+    [SerializeField] private float rotationSpeed = 100f;
 
     void Start()
     {
