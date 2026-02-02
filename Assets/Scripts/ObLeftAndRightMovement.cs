@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ObFourMovement : MonoBehaviour
+public class ObLeftAndRightMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody obFourRigidbody;
     [SerializeField] private float speedObFour = 5f;
