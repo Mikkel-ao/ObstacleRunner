@@ -1,17 +1,15 @@
+using System;
 using UnityEngine;
 
 public class CoinCollect : MonoBehaviour
 {
-    public int coins = 0;
-
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Gem"))
+        PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
+        if (playerInventory != null)
         {
-            Debug.Log("Triggered with: " + other.name);
-            coins ++;
-            Destroy(other.gameObject);
-        }        
+            playerInventory.CoinCollected();    
+            gameObject.SetActive(false);
+        }
     }
-    
 }
